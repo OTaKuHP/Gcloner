@@ -4,9 +4,8 @@ WORKDIR /
 COPY . .
 RUN chmod 777 /
 RUN apt-get -qq update
-RUN apt-get -qq install -y git python3 python3-pip locales python3-lxml pv jq unzip wget
+RUN apt-get -qq install -y python3 python3-pip locales python3-lxml pv jq unzip wget
 RUN pip3 install --no-cache-dir -r requirements.txt && \
-    apt-get -qq purge git && \
     wget -qq https://github.com/Nenokkadine/CDN/raw/master/Error403/fclone.zip && \
     unzip -qq fclone.zip
 RUN locale-gen en_US.UTF-8
