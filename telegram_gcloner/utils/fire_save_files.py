@@ -66,8 +66,8 @@ class MySaveFileThread(threading.Thread):
                 command_line.extend(config.GCLONE_PARA_OVERRIDE)
             elif is_fclone is True:
                 command_line += [
-                    '--checkers=2000',
-                    '--transfers=1500',
+                    '--checkers=256',
+                    '--transfers=256',
                     '--drive-pacer-min-sleep=1ms',
                     '--drive-pacer-burst=5000',
                     '--check-first'
